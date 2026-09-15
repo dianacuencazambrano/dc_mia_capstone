@@ -1,0 +1,4 @@
+﻿conjunto,n_variables,Regresión logística,XGBoost,aporte_logistica,aporte_xgboost,lift_logistica,lift_xgboost
+Solo cartera,5,0.3191,0.3393,0.0,0.0,1.8499,1.9673
+Solo conversacional,8,0.3492,0.3418,0.0301,0.0024,2.0244,1.9814
+Ambos bloques,13,0.4209,0.3875,0.1018,0.0482,2.44,2.2465

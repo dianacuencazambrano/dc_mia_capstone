@@ -1,0 +1,18 @@
+# Datos crudos. Contienen cedulas sin anonimizar y la cabecera del volcado SQL
+# guarda la IP del servidor de produccion.
+bases/
+
+# Salt de anonimizacion. Con el, los hashes del dataset son reversibles por
+# fuerza bruta: el espacio de cedulas ecuatorianas es pequeno.
+.salt
+
+# Entorno
+.venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+.claude
+
+entrega

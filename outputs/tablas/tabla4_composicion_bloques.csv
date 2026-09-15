@@ -1,0 +1,14 @@
+﻿bloque,variable,descripcion,origen
+cartera,dias_mora_inicial,Días de mora al inicio del mes,BigQuery
+cartera,meses_consecutivos_mora,Meses calendario consecutivos en mora,BigQuery
+cartera,mes_campania,Identificador de campaña del mes,BigQuery
+cartera,tipo_operacion,TC (tarjeta) o CARTERA,BigQuery
+cartera,bucket,Tramo de mora asignado por el banco (B1–B7),BigQuery
+conversacional,total_intenciones,Intenciones activadas en el mes,MySQL (chatbot)
+conversacional,intenciones_distintas,Intenciones únicas en el mes,MySQL (chatbot)
+conversacional,activo_compromiso,Activó intención de compromiso de pago,MySQL (chatbot)
+conversacional,dias_compromiso,"Plazo elegido (1, 3 o 5 días)",MySQL (chatbot)
+conversacional,ultima_intencion_antes_compromiso,Intención previa al primer compromiso,MySQL (chatbot)
+conversacional,hora_primera_interaccion,Hora de la primera interacción (0-23),MySQL (chatbot)
+conversacional,dia_semana_primera_interaccion,Día de la semana (0=lunes),MySQL (chatbot)
+conversacional,tiene_conversacion,El cliente-mes tuvo registro en el chatbot,MySQL (chatbot)

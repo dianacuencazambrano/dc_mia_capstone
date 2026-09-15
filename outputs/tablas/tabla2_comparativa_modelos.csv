@@ -1,0 +1,9 @@
+﻿puesto,modelo,familia,variables,seleccion_hiperparametros,PR_AUC,ROC_AUC,Brier,lift_PR
+1,Logistica completa,LogisticRegression,14 (completo),—,0.4543,0.7724,0.1377,2.634
+2,XGBoost completo · CV temporal,XGBClassifier,14 (completo),ventana expansiva,0.4458,0.7912,0.1616,2.5845
+3,Logistica operativa,LogisticRegression,13 (operativo),—,0.4209,0.7644,0.1421,2.44
+4,XGBoost completo · monotono,XGBClassifier,14 (completo),temporal + monotonía,0.4067,0.7816,0.1623,2.3578
+5,XGBoost operativo · CV temporal,XGBClassifier,13 (operativo),ventana expansiva,0.3923,0.7751,0.1635,2.2742
+6,XGBoost operativo · monotono,XGBClassifier,13 (operativo),temporal + monotonía,0.3895,0.7737,0.1665,2.2579
+7,XGBoost operativo · CV aleatoria,XGBClassifier,13 (operativo),StratifiedGroupKFold,0.3782,0.7648,0.1601,2.1926
+8,Tasa base (dummy),DummyClassifier,—,referencia,0.1725,0.5,0.1457,1.0

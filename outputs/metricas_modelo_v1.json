@@ -1,0 +1,172 @@
+{
+  "dataset": {
+    "filas": 18580,
+    "clientes": 9906,
+    "positivos": 0.2048977395048439
+  },
+  "split": {
+    "corte": "202602",
+    "train": 11078,
+    "test": 7502,
+    "positivos_train": 0.22684600108322803,
+    "positivos_test": 0.1724873367102106
+  },
+  "cv_pr_auc": {
+    "operativo_temporal": 0.4992857127475573,
+    "operativo_grupos": 0.5477362999282358,
+    "completo_temporal": 0.522897836266828
+  },
+  "test": {
+    "Tasa base (dummy)": {
+      "PR_AUC": 0.1724873367102106,
+      "ROC_AUC": 0.5,
+      "Brier": 0.14569031977724736
+    },
+    "Logistica operativa": {
+      "PR_AUC": 0.42087588328030145,
+      "ROC_AUC": 0.7643706978281999,
+      "Brier": 0.14205600613462552
+    },
+    "Logistica completa": {
+      "PR_AUC": 0.4543367055051839,
+      "ROC_AUC": 0.7723500065727625,
+      "Brier": 0.13769713409623838
+    },
+    "XGBoost operativo · CV aleatoria": {
+      "PR_AUC": 0.37818861114360414,
+      "ROC_AUC": 0.7647717234779075,
+      "Brier": 0.1601075381040573
+    },
+    "XGBoost operativo · CV temporal": {
+      "PR_AUC": 0.392274019658702,
+      "ROC_AUC": 0.7750529306553642,
+      "Brier": 0.16352541744709015
+    },
+    "XGBoost operativo · monotono": {
+      "PR_AUC": 0.38946240216418293,
+      "ROC_AUC": 0.7736603888486113,
+      "Brier": 0.16654656827449799
+    },
+    "XGBoost completo · CV temporal": {
+      "PR_AUC": 0.44580136020602734,
+      "ROC_AUC": 0.7911896849455855,
+      "Brier": 0.16156072914600372
+    },
+    "XGBoost completo · monotono": {
+      "PR_AUC": 0.4066942721795531,
+      "ROC_AUC": 0.7816197801311366,
+      "Brier": 0.16234636306762695
+    }
+  },
+  "capacidad_20pct_operativo": {
+    "capacidad": "20%",
+    "gestionados": 1500,
+    "cumplidores_capturados": 598,
+    "precision": 0.39866666666666667,
+    "recall": 0.46213292117465227,
+    "lift": 2.3112807831014943
+  },
+  "significancia": [
+    {
+      "comparacion": "Logistica operativa vs XGBoost operativo",
+      "diferencia": 0.02841653188624966,
+      "ic_bajo": 0.013498759975423009,
+      "ic_alto": 0.04380441881378154,
+      "significativa": true
+    },
+    {
+      "comparacion": "Logistica completa vs XGBoost completo",
+      "diferencia": 0.008725878251942236,
+      "ic_bajo": -0.0039048170694852527,
+      "ic_alto": 0.0223153989182532,
+      "significativa": false
+    }
+  ],
+  "estabilidad_mensual": [
+    {
+      "mes": "202602",
+      "n": 3128,
+      "positivos": 0.1198849104859335,
+      "logit_operativo": 0.271984631388963,
+      "xgb_operativo": 0.2542948372463467,
+      "logit_completo": 0.3190600696488928,
+      "xgb_completo": 0.2998315487733131,
+      "gana_operativo": "logistica",
+      "gana_completo": "logistica"
+    },
+    {
+      "mes": "202603",
+      "n": 2605,
+      "positivos": 0.16813819577735126,
+      "logit_operativo": 0.5094575529911047,
+      "xgb_operativo": 0.42585836725960086,
+      "logit_completo": 0.552090051624904,
+      "xgb_completo": 0.49085608033276207,
+      "gana_operativo": "logistica",
+      "gana_completo": "logistica"
+    },
+    {
+      "mes": "202604",
+      "n": 1769,
+      "positivos": 0.2719050310910119,
+      "logit_operativo": 0.5347724146218643,
+      "xgb_operativo": 0.5393423485160131,
+      "logit_completo": 0.5502412754575434,
+      "xgb_completo": 0.5626181218094737,
+      "gana_operativo": "xgboost",
+      "gana_completo": "xgboost"
+    }
+  ],
+  "hiperparametros": {
+    "operativo · CV temporal": {
+      "subsample": 0.85,
+      "reg_lambda": 1,
+      "n_estimators": 600,
+      "min_child_weight": 10,
+      "max_depth": 3,
+      "learning_rate": 0.02,
+      "gamma": 0,
+      "colsample_bytree": 1.0
+    },
+    "operativo · CV aleatoria por grupos": {
+      "subsample": 0.7,
+      "reg_lambda": 1,
+      "n_estimators": 400,
+      "min_child_weight": 10,
+      "max_depth": 4,
+      "learning_rate": 0.05,
+      "gamma": 0.5,
+      "colsample_bytree": 0.6
+    },
+    "completo · CV temporal": {
+      "subsample": 0.85,
+      "reg_lambda": 20,
+      "n_estimators": 200,
+      "min_child_weight": 5,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "gamma": 0,
+      "colsample_bytree": 0.6
+    },
+    "operativo monotono": {
+      "subsample": 0.85,
+      "reg_lambda": 1,
+      "n_estimators": 600,
+      "min_child_weight": 10,
+      "max_depth": 3,
+      "learning_rate": 0.02,
+      "gamma": 0,
+      "colsample_bytree": 1.0
+    },
+    "completo monotono": {
+      "subsample": 0.85,
+      "reg_lambda": 20,
+      "n_estimators": 200,
+      "min_child_weight": 5,
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "gamma": 2,
+      "colsample_bytree": 0.8
+    }
+  }
+}
